@@ -17,4 +17,7 @@ test:
 check-diff:
 	git diff --exit-code
 
+release:
+	npm run release
+
 all: format lint check build
