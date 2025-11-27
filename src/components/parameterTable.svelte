@@ -1,6 +1,7 @@
 <script lang="ts">
 	import * as Table from '$lib/components/ui/table';
 	import { Button } from '$lib/components/ui/button';
+	import Card from '$lib/components/ui/card/card.svelte';
 	import { OpenAPI, DefaultService } from '$lib/api';
 	import type { Parameter } from '$lib/api/models/Parameter';
 	import { onMount } from 'svelte';
@@ -27,8 +28,11 @@
 
 <!-- Add a new line -->
 
-<div class="parameter-card">
-	<Table.Root>
+ <Card >
+
+	<h1 class="text-lg font-medium mb-4 px-2">Parameter Table</h1>
+
+	<Table.Root class="p-6">
 		<Table.Header class="bg-slate-800/70">
 			<Table.Row>
 				<Table.Head>Parameter Name</Table.Head>
@@ -63,4 +67,5 @@
 			{/each}
 		</Table.Body>
 	</Table.Root>
-</div>
+
+ </Card>

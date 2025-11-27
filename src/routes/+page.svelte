@@ -1,7 +1,8 @@
 <!-- We add in the background and center everything -->
 <script lang="ts">
 	import Counter from '../components/counter.svelte';
-	import Table from '../components/parameterTable.svelte';
+	import ParameterTable from '../components/parameterTable.svelte';
+	import BalancesChart from '../components/balancesChart.svelte';
 </script>
 
 <main
@@ -12,6 +13,8 @@
 		Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
 	</p>
 
+	<BalancesChart />
+
 	<Counter />
-	<Table />
+	<ParameterTable />
 </main>
