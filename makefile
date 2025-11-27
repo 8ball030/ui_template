@@ -18,6 +18,10 @@ check-diff:
 	git diff --exit-code
 
 release:
+	if [ -z "$GITHUB_TOKEN" ]; then \
+		echo "GITHUB_TOKEN is not set. Aborting release."; \
+		exit 1; \
+	fi
 	npm run release -- --ci
 
 all: format lint check build
