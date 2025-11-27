@@ -11,5 +11,10 @@ format:
 	npm run format
 check:
 	npm run check
+test:
+	npm run test
+
+check-diff:
+	git diff --exit-code
 
 all: format lint check build

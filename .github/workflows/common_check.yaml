@@ -52,3 +52,5 @@ jobs:
         run: make test
       - name: Build project
         run: npm run build
+      - name: Check for uncommitted changes
+        run: make check-diff
